@@ -1,6 +1,6 @@
 # NirvanaPass #
 
-## Attain password freedom. Attain Password Nirvana. ##
+## Password management for the 21st century ##
 
 A new kind of password manager. Nobody should remember passwords again. Not even your password manager.
 
