@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">NirvanaPass</string>
-    <string name="title_activity_login">NirvanaPass</string>
+    <string name="appName">NirvanaPass</string>
     <string name="slogan">Password management for the 21st century</string>
-    <string name="login_name">Name</string>
-    <string name="login_password">Password</string>
-    <string name="login_submit">Go</string>
+    <string name="loginName">Name</string>
+    <string name="loginPassword">Password</string>
+    <string name="loginSubmit">Go</string>
 </resources>
