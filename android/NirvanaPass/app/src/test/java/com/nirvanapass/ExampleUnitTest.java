@@ -1,4 +1,4 @@
-package com.pratyushnalam.nirvanapass;
+package com.nirvanapass;
 
 import org.junit.Test;
 
