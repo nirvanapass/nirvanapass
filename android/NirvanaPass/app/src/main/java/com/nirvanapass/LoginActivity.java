@@ -2,6 +2,7 @@ package com.nirvanapass;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -10,8 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import de.mkammerer.argon2.Argon2;
-import de.mkammerer.argon2.Argon2Factory;
+import com.lambdaworks.crypto.SCrypt;
+
+import java.security.GeneralSecurityException;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -40,12 +42,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickLoginSubmitButton(View view) {
-        Argon2 argon2 = Argon2Factory.create();
         try {
-            String hash = argon2.hash(10, 65536, 8, loginNameEditText.getText().toString() + " " + loginPasswordEditText.getText().toString());
-            Toast.makeText(LoginActivity.this, hash, Toast.LENGTH_LONG).show();
-        } catch (UnsatisfiedLinkError ule) {
-            Toast.makeText(LoginActivity.this, "Need to fix linking error", Toast.LENGTH_LONG).show();
+            String hash = Base64.encodeToString(SCrypt.scrypt(loginPasswordEditText.getText().toString().getBytes(), loginNameEditText.getText().toString().getBytes(), 16384, 16, 2, 128), Base64.DEFAULT);
+            Toast.makeText(LoginActivity.this, hash, Toast.LENGTH_SHORT).show();
+        } catch (GeneralSecurityException e) {
+            e.printStackTrace();
         }
     }
 }
