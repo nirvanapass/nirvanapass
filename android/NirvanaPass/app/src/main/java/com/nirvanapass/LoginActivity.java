@@ -43,8 +43,11 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onClickLoginSubmitButton(View view) {
         try {
+            long time1 = System.currentTimeMillis();
             String hash = Base64.encodeToString(SCrypt.scrypt(loginPasswordEditText.getText().toString().getBytes(), loginNameEditText.getText().toString().getBytes(), 16384, 16, 2, 128), Base64.DEFAULT);
-            Toast.makeText(LoginActivity.this, hash, Toast.LENGTH_SHORT).show();
+            long time2 = System.currentTimeMillis();
+            long timeDiff = time2 - time1;
+            Toast.makeText(LoginActivity.this, timeDiff + "ms::::" + hash, Toast.LENGTH_LONG).show();
         } catch (GeneralSecurityException e) {
             e.printStackTrace();
         }
