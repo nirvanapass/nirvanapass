@@ -1,5 +1,7 @@
 package com.nirvanapass;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
@@ -43,11 +45,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onClickLoginSubmitButton(View view) {
         try {
-            long time1 = System.currentTimeMillis();
             String hash = Base64.encodeToString(SCrypt.scrypt(loginPasswordEditText.getText().toString().getBytes(), loginNameEditText.getText().toString().getBytes(), 16384, 16, 2, 128), Base64.DEFAULT);
-            long time2 = System.currentTimeMillis();
-            long timeDiff = time2 - time1;
-            Toast.makeText(LoginActivity.this, timeDiff + "ms::::" + hash, Toast.LENGTH_LONG).show();
+            SharedPreferences userSession = getSharedPreferences("userSession", Context.MODE_PRIVATE);
+            SharedPreferences.Editor userSessionEditor = userSession.edit();
+            userSessionEditor.putString("name", loginNameEditText.getText().toString());
+            userSessionEditor.putString("hash", hash);
+            userSessionEditor.apply();
         } catch (GeneralSecurityException e) {
             e.printStackTrace();
         }
