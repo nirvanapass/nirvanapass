@@ -4,4 +4,7 @@
     <dimen name="activityVerticalMargin">16dp</dimen>
     <dimen name="componentMargin">16dp</dimen>
     <dimen name="fabMargin">16dp</dimen>
+
+    <!-- Header image dimensions -->
+    <dimen name="imageSize">50dp</dimen>
 </resources>

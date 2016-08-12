@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="loginHomeLayout" type="id" />
-    <item name="loginHeaderLayout" type="id" />
     <item name="loginFormLayout" type="id" />
     <item name="loginHeaderLogoLayout" type="id" />
     <item name="loginLogoImageView" type="id" />
@@ -12,4 +11,6 @@
     <item name="loginPasswordLayout" type="id" />
     <item name="loginPasswordEditText" type="id" />
     <item name="loginSubmitButton" type="id" />
+
+    <item name="passwordHomeLayout" type="id" />
 </resources>
