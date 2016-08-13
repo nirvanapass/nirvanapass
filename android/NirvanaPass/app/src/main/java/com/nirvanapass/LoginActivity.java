@@ -1,6 +1,7 @@
 package com.nirvanapass;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -50,6 +51,9 @@ public class LoginActivity extends AppCompatActivity {
             userSessionEditor.putString("name", loginNameEditText.getText().toString());
             userSessionEditor.putString("hash", hash);
             userSessionEditor.apply();
+
+            Intent intent = new Intent(this, PasswordActivity.class);
+            startActivity(intent);
         } catch (GeneralSecurityException e) {
             e.printStackTrace();
         }

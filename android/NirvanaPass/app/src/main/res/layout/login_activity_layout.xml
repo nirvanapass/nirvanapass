@@ -33,6 +33,7 @@
                 android:hint="@string/loginName"
                 android:imeOptions="actionNext"
                 android:inputType="text" />
+
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -48,6 +49,7 @@
                 android:hint="@string/loginPassword"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword" />
+
         </android.support.design.widget.TextInputLayout>
 
         <Button
@@ -58,5 +60,7 @@
             android:layout_margin="@dimen/componentMargin"
             android:onClick="onClickLoginSubmitButton"
             android:text="@string/loginSubmit" />
+
     </LinearLayout>
+
 </LinearLayout>

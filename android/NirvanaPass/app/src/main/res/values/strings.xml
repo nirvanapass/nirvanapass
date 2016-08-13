@@ -1,7 +1,14 @@
 <resources>
     <string name="appName">NirvanaPass</string>
     <string name="slogan">Password management for the 21st century</string>
+
     <string name="loginName">Name</string>
     <string name="loginPassword">Password</string>
     <string name="loginSubmit">Go</string>
+
+    <string name="passwordWebsite">Username@Website (example: pratnala@google.com)</string>
+    <string name="passwordIteration">Iteration</string>
+    <string name="passwordSubmit">Generate</string>
+    <string name="passwordCopy">Copy to clipboard</string>
+    <string name="passwordGeneratePlaceholder">Generated password here</string>
 </resources>
