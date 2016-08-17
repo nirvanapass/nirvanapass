@@ -12,7 +12,7 @@
     <item name="loginPasswordEditText" type="id" />
     <item name="loginSubmitButton" type="id" />
 
-    <item name="passwordHolderLayout" type="id" />
+    <item name="passwordTabHost" type="id" />
     <item name="passwordHomeLayout" type="id" />
     <item name="passwordWebsiteLayout" type="id" />
     <item name="passwordWebsiteEditText" type="id" />
@@ -22,4 +22,6 @@
     <item name="passwordGenerateLayout" type="id" />
     <item name="passwordGenerateTextView" type="id" />
     <item name="passwordCopyButton" type="id" />
+    <item name="profileLayout" type="id" />
+    <item name="helpLayout" type="id" />
 </resources>
