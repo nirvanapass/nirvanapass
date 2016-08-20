@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
 //            userSessionEditor.putString("hash", hash);
 //            userSessionEditor.apply();
 
-        Intent intent = new Intent(this, PasswordActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 //        } catch (GeneralSecurityException e) {
 //            e.printStackTrace();

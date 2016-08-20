@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activityHorizontalMargin"
     android:paddingRight="@dimen/activityHorizontalMargin"
     android:paddingTop="@dimen/activityVerticalMargin"
-    tools:context="com.nirvanapass.PasswordActivity">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

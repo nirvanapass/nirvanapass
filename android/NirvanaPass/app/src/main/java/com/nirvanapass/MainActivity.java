@@ -5,12 +5,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TabHost;
 
-public class PasswordActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.password_activity_layout);
+        setContentView(R.layout.main_activity_layout);
 
         TabHost passwordTabHost = (TabHost) findViewById(R.id.passwordTabHost);
         passwordTabHost.setup();
