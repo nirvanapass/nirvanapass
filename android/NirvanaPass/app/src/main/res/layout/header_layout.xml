@@ -11,8 +11,8 @@
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@id/loginLogoImageView"
-            android:layout_width="@dimen/imageSize"
-            android:layout_height="@dimen/imageSize"
+            android:layout_width="@dimen/logoSize"
+            android:layout_height="@dimen/logoSize"
             android:layout_margin="@dimen/componentMargin"
             android:src="@drawable/logo" />
 

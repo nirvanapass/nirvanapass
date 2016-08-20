@@ -2,7 +2,7 @@
 
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@id/passwordTabHost"
+    android:id="@id/mainTabHost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activityHorizontalMargin"
@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activityVerticalMargin"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@id/mainHomeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -18,128 +19,15 @@
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <LinearLayout
-                android:id="@id/passwordHomeLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <include layout="@layout/header_layout" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp" />
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@id/passwordWebsiteLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@id/passwordWebsiteEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/componentMargin"
-                        android:hint="@string/passwordWebsite"
-                        android:imeOptions="actionNext"
-                        android:inputType="text" />
-
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@id/passwordIterationLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@id/passwordIterationEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/componentMargin"
-                        android:hint="@string/passwordIteration"
-                        android:imeOptions="actionGo"
-                        android:inputType="number" />
-
-                </android.support.design.widget.TextInputLayout>
-
-                <Button
-                    android:id="@id/passwordSubmitButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/componentMargin"
-                    android:text="@string/passwordSubmit" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp" />
-
-                <LinearLayout
-                    android:id="@id/passwordGenerateLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@id/passwordGenerateTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="" />
-
-                    <Space
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center" />
-
-                    <Button
-                        android:id="@id/passwordCopyButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/passwordCopy"
-                        android:visibility="invisible" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@id/profileLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hi" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@id/helpLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Help" />
-
-            </LinearLayout>
-
-        </FrameLayout>
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
 
         <TabWidget
             android:id="@android:id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </TabHost>

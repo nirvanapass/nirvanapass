@@ -6,5 +6,14 @@
     <dimen name="fabMargin">16dp</dimen>
 
     <!-- Header image dimensions -->
-    <dimen name="imageSize">50dp</dimen>
+    <dimen name="logoSize">50dp</dimen>
+
+    <!-- Space below header -->
+    <dimen name="headerSeparation">60dp</dimen>
+
+    <!-- Space in password layout above generated password -->
+    <dimen name="generateSpace">30dp</dimen>
+
+    <!-- Space between generated password and clipboard button -->
+    <dimen name="clipboardSpace">30dp</dimen>
 </resources>

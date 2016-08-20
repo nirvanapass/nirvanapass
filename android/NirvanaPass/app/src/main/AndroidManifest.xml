@@ -20,6 +20,15 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainactivity.PasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainactivity.UserActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainactivity.HelpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
