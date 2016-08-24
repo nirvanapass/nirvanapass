@@ -13,7 +13,7 @@
     <item name="loginLoginButton" type="id" />
     <item name="loginProgressBar" type="id" />
 
-    <item name="mainTabHost" type="id" />
+    <item name="mainViewPager" type="id" />
     <item name="mainHomeLayout" type="id" />
 
     <item name="passwordHomeLayout" type="id" />
